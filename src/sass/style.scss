@@ -1,0 +1,33 @@
+@import "components/vars";
+@import "components/mixins";
+@import "components/print";
+
+@include main;
+
+header {
+  min-height: 130px;
+}
+
+main {
+  height: 200px;
+}
+
+footer {
+  min-height: 90px;
+  background-color: $veryDarkBlue;
+
+  .attribution {
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    a,
+    a:visited,
+    a:active {
+      color: $secondary_clr;
+
+      &:hover {
+        color: rgba($color: $secondary_clr, $alpha: 0.5);
+      }
+    }
+  }
+}

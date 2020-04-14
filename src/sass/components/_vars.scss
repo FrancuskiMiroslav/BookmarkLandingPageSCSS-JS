@@ -1,0 +1,33 @@
+$main_font: "Rubik", sans-serif;
+$secondary_font: "Gilroy", cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai");
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.otf");
+  src: url("../fonts/Gilroy-ExtraBold.otf");
+}
+
+$grayishBlue: hsl(229, 8%, 60%);
+$veryDarkBlue: hsl(229, 31%, 21%);
+
+$softBlue: hsl(231, 69%, 60%);
+$softRed: hsl(0, 94%, 66%);
+
+$primary_clr: $softBlue;
+$secondary_clr: $softRed;
+
+$show-image: true;
+$home-image: url(../images/home-bg-min.jpg);
+$background-opacity: 0.85;
+
+$fw-normal: 400;
+$fw-bold: 700;
+
+$min_width: 320px;
+$max_width: 3840px;
+$min_font: 14px;
+$max_font: 24px;
