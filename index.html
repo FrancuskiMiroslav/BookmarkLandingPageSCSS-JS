@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,37 +7,38 @@
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/style.css" />
     <!--endbuild-->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
 
   <body>
-    <header>
+    <header id="sticky">
       <div class="left">
-        <a href="#"><img src="../svg/logo-bookmark.svg" alt="logo" class="main-logo"></a>
+        <a href="#"><img src="svg/logo-bookmark.svg" alt="logo" id="main-logo" /></a>
       </div>
       <div class="menu-btn" id="menu-btn">
         <div class="menu-btn__burger"></div>
       </div>
-      <div class="right">
+      <div class="right" id="nav">
         <nav class="right__top-nav">
           <ul class="right__list">
             <li class="right__list-item"><a href="#">Features</a></li>
             <li class="right__list-item"><a href="#">Pricing</a></li>
             <li class="right__list-item"><a href="#">Contact</a></li>
-            <li class="right__list-item btn"><a href="#">Login</a></li>
+            <li class="right__list-item btn-secondary"><a class="login" href="#">Login</a></li>
           </ul>
           <ul class="right__social-icons">
-            <li class="right__social-icon"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="right__social-icon"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li>
+              <a class="right__social-icon" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+            </li>
+            <li>
+              <a class="right__social-icon" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </li>
           </ul>
         </nav>
       </div>
-
     </header>
-    <main>
-
-    </main>
+    <main></main>
     <footer>
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
@@ -52,5 +52,4 @@
     <script type="text/javascript" src="js/main.js"></script>
     <!-- endbuild -->
   </body>
-
 </html>
