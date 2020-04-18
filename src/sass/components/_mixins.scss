@@ -2,11 +2,10 @@
   html {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    font-family: $main_font, $secondary_font, Verdana, Geneva, Tahoma,
-      sans-serif;
+    font-family: $main_font, $secondary_font, Verdana, Geneva, Tahoma, sans-serif;
   }
 
-  body{
+  body {
     font-size: 18px;
   }
 
@@ -27,8 +26,21 @@
     text-decoration: none;
   }
 
-  .btn{
-    @include btn
+  .btn-primary {
+    @include btn-primary;
+  }
+
+  .btn-secondary {
+    @include btn-secondary;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
   }
 }
 
@@ -48,8 +60,7 @@
       font-size: $min-font-size;
       @media screen and (min-width: $min-vw) {
         font-size: calc(
-          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
-            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
         );
       }
       @media screen and (min-width: $max-vw) {
@@ -95,22 +106,19 @@
   @font-face {
     font-family: "#{$name}";
     src: url("../fonts/#{$file}.eot");
-    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/#{$file}.woff") format("woff"),
-      url("../fonts/#{$file}.ttf") format("truetype"),
-      url("../fonts/#{$file}.svg?#webfont") format("svg");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"), url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.ttf") format("truetype"), url("../fonts/#{$file}.svg?#webfont") format("svg");
   }
 }
 
-@mixin btn {
-  border: 1px solid $primary_clr;
-  color: $primary_clr;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  cursor: pointer;
+@mixin btn-primary {
+  border: 2px solid $primary_clr;
+  padding: 18px 25px;
+}
+
+@mixin btn-secondary {
+  border: 2px solid $secondary_clr;
+  padding: 16px 35px;
 }
 
 @mixin easeOut {
