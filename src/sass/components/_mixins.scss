@@ -26,6 +26,10 @@
     text-decoration: none;
   }
 
+  p {
+    color: $grayishBlue;
+  }
+
   .btn-primary {
     @include btn-primary;
   }

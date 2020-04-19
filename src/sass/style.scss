@@ -284,6 +284,9 @@ main {
   .hero {
     position: relative;
     overflow: hidden;
+    @include media-max-width(750) {
+      margin-bottom: 150px;
+    }
 
     &::after {
       content: "";
@@ -325,6 +328,7 @@ main {
         width: 100%;
         margin-top: 50px;
         text-align: center;
+        z-index: -50;
       }
     }
 
@@ -376,6 +380,178 @@ main {
           width: 47%;
           padding: 16px;
         }
+      }
+    }
+  }
+
+  .tabs {
+    margin-bottom: 160px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 45%;
+      height: 100%;
+      max-height: 350px;
+      min-height: 200px;
+      bottom: 0;
+      left: 0;
+      z-index: -10;
+      background-color: $primary_clr;
+      border-radius: 0 150px 150px 0;
+
+      @include media-max-width(750) {
+        bottom: 345px;
+        max-height: 200px;
+        width: 70%;
+      }
+    }
+
+    &__container {
+      @include wrapper(1110, 30);
+    }
+
+    &__heading {
+      max-width: 590px;
+      margin: 0 auto;
+      padding: 0 30px;
+      text-align: center;
+
+      &__title {
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+
+      &__text {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__list {
+      max-width: 732px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include media-max-width(750) {
+        flex-direction: column;
+        width: 100%;
+
+        & :first-of-type {
+          border-bottom: 1px solid rgba($color: $grayishBlue, $alpha: 0.5);
+        }
+      }
+
+      &__btn {
+        width: 35%;
+        text-align: center;
+        padding: 25px 0;
+        border-bottom: 1px solid rgba($color: $grayishBlue, $alpha: 0.5);
+        cursor: pointer;
+
+        &:hover {
+          .btn {
+            color: $secondary_clr;
+          }
+        }
+
+        @include media-max-width(750) {
+          width: 100%;
+          padding: 22px 0;
+        }
+
+        .btn {
+          border: none;
+          outline: none;
+          background: transparent;
+          transition: 0.5s all ease-in-out;
+          font-size: 18px;
+          cursor: pointer;
+        }
+      }
+
+      &__btn.active {
+        position: relative;
+
+        .btn {
+          &::before {
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: rgba($color: $secondary_clr, $alpha: 1);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            @include media-max-width(750) {
+              width: 50%;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+
+    &__tab {
+      position: absolute;
+      opacity: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 70px 30px;
+
+      @include media-max-width(750) {
+        flex-direction: column;
+      }
+    }
+
+    &__tab.active {
+      opacity: 1;
+      display: flex;
+      transition: all 1s ease-in-out;
+      max-width: 1110px;
+      min-height: 510px;
+
+      @include media-max-width(750) {
+        left: 0;
+      }
+    }
+
+    &__content {
+      min-height: 510px;
+      @include media-max-width(750) {
+        min-height: 650px;
+      }
+
+      &__left {
+        max-width: 49%;
+        max-height: 380px;
+        @include media-max-width(750) {
+          max-width: 100%;
+          margin-bottom: 45px;
+        }
+
+        img {
+          width: 100%;
+          max-height: 380px;
+        }
+      }
+
+      &__right {
+        max-width: 42%;
+        @include media-max-width(750) {
+          max-width: 100%;
+          text-align: center;
+        }
+      }
+
+      &__title {
+        margin-bottom: 35px;
+      }
+
+      &__text {
+        margin-bottom: 40px;
       }
     }
   }

@@ -21,4 +21,32 @@ window.onload = function () {
     header.classList.toggle("overlay");
     nav.classList.toggle("showing");
   });
+
+  // tabs
+  const tabListBtn = document.querySelectorAll(".tabs__list__btn");
+  const tabs = document.querySelectorAll(".tabs__container");
+
+  tabListBtn.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const tabNav = tab.parentElement;
+      const tabsContainer = tabNav.parentElement;
+      const tabNumber = tab.dataset.forTab;
+      const tabToActivate = tabsContainer.querySelector(`.tabs__tab[data-tab="${tabNumber}"]`);
+
+      tabNav.querySelectorAll(".tabs__list__btn").forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      tabsContainer.querySelectorAll(".tabs__tab").forEach((tab) => {
+        tab.classList.remove("active");
+      });
+
+      tab.classList.add("active");
+      tabToActivate.classList.add("active");
+    });
+  });
+
+  tabs.forEach((tab) => {
+    tab.querySelector(".tabs__list .tabs__list__btn").click();
+  });
 };
