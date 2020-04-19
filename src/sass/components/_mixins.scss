@@ -34,13 +34,20 @@
     @include btn-secondary;
   }
 
+  .btn-tertiary {
+    @include btn-tertiary;
+  }
+
   .btn-primary,
-  .btn-secondary {
+  .btn-secondary,
+  .btn-tertiary {
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -113,12 +120,43 @@
 
 @mixin btn-primary {
   border: 2px solid $primary_clr;
-  padding: 18px 25px;
+  background-color: $primary_clr;
+  padding: 16px 25px;
+  color: #ffffff;
+  border: 2px solid $primary_clr;
+
+  &:hover {
+    border: 2px solid $primary_clr;
+    color: $primary_clr;
+    background-color: #ffffff;
+  }
 }
 
 @mixin btn-secondary {
   border: 2px solid $secondary_clr;
-  padding: 16px 35px;
+  background-color: $secondary_clr;
+  padding: 8px 35px;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #ffffff;
+    border: 2px solid $secondary_clr;
+    box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.75);
+  }
+}
+@mixin btn-tertiary {
+  box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.75);
+  padding: 16px 25px;
+  color: $grayishBlue;
+  border: none;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+
+  &:hover {
+    border: 2px solid $veryDarkBlue;
+    color: $veryDarkBlue;
+    box-shadow: none;
+  }
 }
 
 @mixin easeOut {
