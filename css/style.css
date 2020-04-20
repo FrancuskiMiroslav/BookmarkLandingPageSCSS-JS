@@ -89,6 +89,7 @@ p {
   border: 2px solid #fa5757;
   -webkit-box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.75);
+  color: #fa5757;
 }
 
 /* line 48, src/sass/components/_mixins.scss */
@@ -102,7 +103,7 @@ p {
   border: 2px solid #ffffff;
 }
 
-/* line 166, src/sass/components/_mixins.scss */
+/* line 167, src/sass/components/_mixins.scss */
 .btn-tertiary:hover {
   border: 2px solid #252b46;
   color: #252b46;
@@ -1176,27 +1177,221 @@ main .accordion__btn {
   margin: 0 auto;
 }
 
-/* line 733, src/sass/style.scss */
+/* line 732, src/sass/style.scss */
+main .contact {
+  background-color: #5368df;
+  padding: 50px 0;
+}
+
+/* line 735, src/sass/style.scss */
+main .contact__container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: center;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 743, src/sass/style.scss */
+main .contact__small-text {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 6px;
+  font-size: 12px;
+}
+
+/* line 750, src/sass/style.scss */
+main .contact__title {
+  margin-bottom: 38px;
+}
+
+/* line 754, src/sass/style.scss */
+main .contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width: 750px) {
+  /* line 754, src/sass/style.scss */
+  main .contact__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 766, src/sass/style.scss */
+main .contact__form.error::after {
+  position: absolute;
+  content: "";
+  height: 68px;
+  width: 270px;
+  background-color: #fa5757;
+  color: #ffffff;
+  bottom: -21px;
+  left: 0px;
+  font-style: italic;
+  font-size: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 750px) {
+  /* line 766, src/sass/style.scss */
+  main .contact__form.error::after {
+    width: inherit;
+    top: 0px;
+    height: 65px;
+  }
+}
+
+/* line 787, src/sass/style.scss */
+main .contact__error-message {
+  color: #ffffff;
+  position: absolute;
+  bottom: -16px;
+  left: 12px;
+  font-style: italic;
+  visibility: hidden;
+  font-size: 10px;
+}
+
+/* line 797, src/sass/style.scss */
+main .contact__error-message.error {
+  visibility: visible;
+  z-index: 10;
+}
+
+@media (max-width: 750px) {
+  /* line 797, src/sass/style.scss */
+  main .contact__error-message.error {
+    top: 48px;
+  }
+}
+
+/* line 805, src/sass/style.scss */
+main .contact__input {
+  max-width: 300px;
+  padding: 0 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 18px;
+  border: 2px solid transparent;
+  z-index: 10;
+  min-height: 45px;
+}
+
+@media (max-width: 750px) {
+  /* line 805, src/sass/style.scss */
+  main .contact__input {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+
+/* line 822, src/sass/style.scss */
+main .contact__input::-webkit-input-placeholder {
+  color: #9194a1;
+}
+main .contact__input::-moz-placeholder {
+  color: #9194a1;
+}
+main .contact__input:-ms-input-placeholder {
+  color: #9194a1;
+}
+main .contact__input::-ms-input-placeholder {
+  color: #9194a1;
+}
+main .contact__input::placeholder {
+  color: #9194a1;
+}
+
+/* line 826, src/sass/style.scss */
+main .contact__input:focus {
+  outline: 0;
+  border: 1px solid #9194a1;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* line 833, src/sass/style.scss */
+main .contact__input:focus::-webkit-input-placeholder {
+  color: #ffffff;
+}
+main .contact__input:focus::-moz-placeholder {
+  color: #ffffff;
+}
+main .contact__input:focus:-ms-input-placeholder {
+  color: #ffffff;
+}
+main .contact__input:focus::-ms-input-placeholder {
+  color: #ffffff;
+}
+main .contact__input:focus::placeholder {
+  color: #ffffff;
+}
+
+/* line 838, src/sass/style.scss */
+main .contact__input.error {
+  border: 2px solid #fa5757;
+}
+
+@media (max-width: 750px) {
+  /* line 838, src/sass/style.scss */
+  main .contact__input.error {
+    margin-bottom: 36px;
+  }
+}
+
+/* line 846, src/sass/style.scss */
+main .contact__input.success {
+  border: 2px solid greenyellow;
+}
+
+/* line 850, src/sass/style.scss */
+main .contact__btn {
+  padding: 14px;
+}
+
+/* line 856, src/sass/style.scss */
 footer {
   min-height: 90px;
   background-color: #252b46;
 }
 
-/* line 737, src/sass/style.scss */
+/* line 860, src/sass/style.scss */
 footer .attribution {
   color: #ffffff;
   text-align: center;
   padding: 25px;
 }
 
-/* line 741, src/sass/style.scss */
+/* line 864, src/sass/style.scss */
 footer .attribution a,
 footer .attribution a:visited,
 footer .attribution a:active {
   color: #fa5757;
 }
 
-/* line 746, src/sass/style.scss */
+/* line 869, src/sass/style.scss */
 footer .attribution a:hover,
 footer .attribution a:visited:hover,
 footer .attribution a:active:hover {

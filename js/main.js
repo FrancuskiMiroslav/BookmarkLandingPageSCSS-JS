@@ -74,4 +74,44 @@ window.onload = function () {
       }
     });
   });
+
+  //// Email form validation
+  const form = document.getElementById("form");
+  const inputField = document.querySelector("#email");
+  const error = document.getElementById("error");
+
+  // Show input error message
+  function showError(message) {
+    form.className = "contact__form error";
+
+    inputField.classList = "contact__input error";
+
+    error.innerText = message;
+    error.className = "contact__error-message error";
+  }
+
+  // Show success outline
+  function showSuccess() {
+    inputField.classList = "contact__input success";
+
+    error.classList.remove("error");
+
+    form.classList.remove("error");
+  }
+
+  // Check email is valid
+  function checkEmail(input) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!re.test(input.value)) {
+      showError("Whoops, make sure it's an email");
+    } else {
+      showSuccess();
+    }
+  }
+
+  form.addEventListener("submit", (function (e) {
+    e.preventDefault();
+
+    checkEmail(email);
+  }));
 };
