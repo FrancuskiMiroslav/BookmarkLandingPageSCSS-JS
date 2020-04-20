@@ -17,6 +17,7 @@ header {
   transform: translateX(-50%);
   position: fixed;
   transition: all 1s ease-in-out;
+  z-index: 50;
   @include media-max-width(750) {
     &:before {
       content: "";
@@ -321,7 +322,7 @@ main {
     }
 
     &__left {
-      width: 45%;
+      width: 46%;
       margin-top: 12%;
       align-self: flex-start;
       @include media-max-width(750) {
@@ -354,9 +355,6 @@ main {
     }
 
     &__text {
-      color: $grayishBlue;
-      font-size: 16px;
-      line-height: 22px;
       margin-bottom: 30px;
     }
 
@@ -468,6 +466,7 @@ main {
           transition: 0.5s all ease-in-out;
           font-size: 18px;
           cursor: pointer;
+          color: $grayishBlue;
         }
       }
 
@@ -475,6 +474,7 @@ main {
         position: relative;
 
         .btn {
+          color: $veryDarkBlue;
           &::before {
             content: "";
             width: 100%;
@@ -552,6 +552,82 @@ main {
 
       &__text {
         margin-bottom: 40px;
+      }
+    }
+  }
+
+  .boxes {
+    @include wrapper(1110, 30);
+    text-align: center;
+    margin-bottom: 160px;
+
+    &__heading {
+      max-width: 545px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+
+      &__title {
+        margin-bottom: 40px;
+      }
+    }
+
+    .box-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 915px;
+      margin: 0 auto;
+      min-height: 420px;
+      flex-wrap: wrap;
+      @include media-max-width(750) {
+        justify-content: center;
+      }
+
+      &__box {
+        max-width: 280px;
+        box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.16);
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 0 10px 10px;
+        @include media-max-width(750) {
+          margin-bottom: 55px;
+        }
+
+        &__title {
+          margin-bottom: 20px;
+          font-size: 20px;
+        }
+
+        &__text {
+          margin-bottom: 35px;
+          font-size: 14px;
+          color: $grayishBlue;
+        }
+
+        &__dots {
+          width: inherit;
+          align-self: center;
+          margin-bottom: 25px;
+        }
+      }
+
+      & > :nth-child(1) {
+        align-self: baseline;
+      }
+
+      & > :nth-child(2) {
+        align-self: center;
+      }
+
+      & > :nth-child(3) {
+        align-self: flex-end;
+      }
+
+      &__img {
+        margin-bottom: 35px;
+        max-width: 100px;
+        max-height: 100px;
+        align-self: center;
       }
     }
   }
