@@ -1377,21 +1377,173 @@ footer {
   background-color: #252b46;
 }
 
-/* line 860, src/sass/style.scss */
+/* line 859, src/sass/style.scss */
+footer .footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+@media (max-width: 750px) {
+  /* line 859, src/sass/style.scss */
+  footer .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 868, src/sass/style.scss */
+footer .footer-container a {
+  color: #ffffff;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+/* line 873, src/sass/style.scss */
+footer .footer-container a:hover {
+  color: #fa5757;
+}
+
+/* line 878, src/sass/style.scss */
+footer .footer-container .logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 883, src/sass/style.scss */
+footer .footer-container .bottom-logo {
+  -webkit-filter: contrast(10) invert(1) hue-rotate(115deg);
+          filter: contrast(10) invert(1) hue-rotate(115deg);
+  margin-right: 60px;
+  padding-right: 5px;
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+}
+
+@media (max-width: 750px) {
+  /* line 883, src/sass/style.scss */
+  footer .footer-container .bottom-logo {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+/* line 893, src/sass/style.scss */
+footer .footer-container .bottom-logo:hover {
+  -webkit-filter: invert(0);
+          filter: invert(0);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50px 0 0 50px;
+}
+
+/* line 900, src/sass/style.scss */
+footer .footer-container .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 750px) {
+  /* line 900, src/sass/style.scss */
+  footer .footer-container .links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 908, src/sass/style.scss */
+footer .footer-container .links > li {
+  margin-right: 45px;
+}
+
+@media (max-width: 750px) {
+  /* line 908, src/sass/style.scss */
+  footer .footer-container .links > li {
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+}
+
+/* line 916, src/sass/style.scss */
+footer .footer-container .links a {
+  font-size: 16px;
+}
+
+/* line 921, src/sass/style.scss */
+footer .footer-container .social-icons {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 750px) {
+  /* line 921, src/sass/style.scss */
+  footer .footer-container .social-icons {
+    margin-right: auto;
+  }
+}
+
+/* line 930, src/sass/style.scss */
+footer .footer-container .social-icons .icon {
+  margin-left: 40px;
+}
+
+@media (max-width: 750px) {
+  /* line 930, src/sass/style.scss */
+  footer .footer-container .social-icons .icon {
+    margin: 0 20px;
+  }
+}
+
+/* line 936, src/sass/style.scss */
+footer .footer-container .social-icons .icon a {
+  font-size: 28px;
+}
+
+/* line 943, src/sass/style.scss */
 footer .attribution {
   color: #ffffff;
   text-align: center;
   padding: 25px;
 }
 
-/* line 864, src/sass/style.scss */
+/* line 947, src/sass/style.scss */
 footer .attribution a,
 footer .attribution a:visited,
 footer .attribution a:active {
   color: #fa5757;
 }
 
-/* line 869, src/sass/style.scss */
+/* line 952, src/sass/style.scss */
 footer .attribution a:hover,
 footer .attribution a:visited:hover,
 footer .attribution a:active:hover {
