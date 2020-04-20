@@ -631,6 +631,103 @@ main {
       }
     }
   }
+
+  .accordion {
+    @include wrapper(550, 30);
+    padding-bottom: 150px;
+
+    &__heading {
+      text-align: center;
+      font-size: 17px;
+
+      &__title {
+        margin-bottom: 20px;
+      }
+
+      &__text {
+        margin-bottom: 100px;
+        @include media-max-width(750) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+
+    &__container {
+      margin-bottom: 55px;
+    }
+
+    &__item {
+      border-bottom: 1px solid rgba($color: $grayishBlue, $alpha: 0.5);
+
+      &:first-of-type {
+        border-top: 1px solid rgba($color: $grayishBlue, $alpha: 0.5);
+      }
+      @include media-max-width(750) {
+        font-size: 14px;
+      }
+
+      &__header {
+        padding: 28px 0;
+        transition: 0.5s all ease-in-out;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          color: $secondary_clr;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 18px;
+          right: 0;
+          top: 50%;
+          height: 3px;
+          background: rgba($color: $primary_clr, $alpha: 1);
+          transition: all 0.5s ease-in-out;
+        }
+
+        &::before {
+          transform: rotate(45deg) translate(-10px, 10px);
+        }
+
+        &::after {
+          transform: rotate(130deg) translate(2px, 3px);
+        }
+
+        &.open::before {
+          transform: rotate(220deg) translate(0px, 0px);
+          background: $secondary_clr;
+        }
+        &.open::after {
+          transform: rotate(-45deg) translate(-8px, -8px);
+          background: $secondary_clr;
+        }
+      }
+
+      &__body {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.7s ease-in-out all;
+      }
+
+      &__content {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 28px;
+        padding-bottom: 40px;
+        @include media-max-width(750) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__btn {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
 }
 
 footer {
