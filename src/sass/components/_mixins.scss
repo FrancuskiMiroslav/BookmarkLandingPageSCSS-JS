@@ -153,6 +153,7 @@
     background-color: #ffffff;
     border: 2px solid $secondary_clr;
     box-shadow: 0px 8px 15px -10px rgba(0, 0, 0, 0.75);
+    color: $secondary_clr;
   }
 }
 @mixin btn-tertiary {
